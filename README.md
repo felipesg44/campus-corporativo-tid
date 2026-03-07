@@ -1,5 +1,25 @@
 # Proyecto Integrador: Nivel 2 - Front 2 (React)
 
+[![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=FFD62E)](https://vite.dev/)
+[![React_Router](https://img.shields.io/badge/React_Router-CA4245?logo=reactrouter&logoColor=white)](https://reactrouter.com/)
+[![SweetAlert2](https://img.shields.io/badge/SweetAlert2-FF5C8D?logo=sweetalert&logoColor=white)](https://sweetalert2.github.io/)
+[![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)](https://git-scm.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)](https://github.com/)
+[![Conventional_Commits](https://img.shields.io/badge/Conventional_Commits-1.0.0-FE5196)](https://www.conventionalcommits.org/)
+[![GitFlow](https://img.shields.io/badge/Workflow-GitFlow-0F4C81)](https://nvie.com/posts/a-successful-git-branching-model/)
+
+## Vista Visual de Stack y Flujo
+
+| Tema | Iconos/Logos |
+|---|---|
+| Frontend Base | <img src="https://cdn.simpleicons.org/react" alt="React" width="22" /> <img src="https://cdn.simpleicons.org/vite" alt="Vite" width="22" /> <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript" width="22" /> |
+| Navegacion | <img src="https://cdn.simpleicons.org/reactrouter" alt="React Router" width="22" /> |
+| Alertas y UX | <img src="https://cdn.simpleicons.org/sweetalert" alt="SweetAlert2" width="22" /> |
+| Control de Versiones | <img src="https://cdn.simpleicons.org/git" alt="Git" width="22" /> <img src="https://cdn.simpleicons.org/github" alt="GitHub" width="22" /> |
+| Estrategia de ramas | <img src="https://img.shields.io/badge/GitFlow-main%20%7C%20develop%20%7C%20feature%2F%2A-0F4C81" alt="GitFlow" /> |
+| Estandar de commits | <img src="https://img.shields.io/badge/Conventional%20Commits-feat%20fix%20docs%20chore-FE5196" alt="Conventional Commits" /> |
+
 ## Documento de Entregables Detallados
 
 ### Objetivo General de la Materia
