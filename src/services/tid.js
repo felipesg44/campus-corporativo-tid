@@ -164,6 +164,13 @@ export const tidApi = {
     tidStorage.set('inscripciones', insc.filter((i) => i.id !== id));
     return true;
   },
+  async updateInscripcion(id, data) {
+  await delay(400);
+  let insc = tidStorage.get('inscripciones', TID_MOCK.inscripciones);
+  insc = insc.map((i) => (i.id === id ? { ...i, ...data } : i));
+  tidStorage.set('inscripciones', insc);
+  return insc.find((i) => i.id === id);
+},
   async getCalificaciones(usuario_id) {
     await delay(400);
     return tidStorage.get('calificaciones', TID_MOCK.calificaciones).filter((c) => c.usuario_id === usuario_id);

@@ -6,7 +6,11 @@ import './index.css';
 import { GlobalStyles } from './components/components.jsx';
 import { router } from './router/router.jsx';
 
-createRoot(document.getElementById('root')).render(
+
+
+
+
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <GlobalStyles />
     <RouterProvider router={router} />

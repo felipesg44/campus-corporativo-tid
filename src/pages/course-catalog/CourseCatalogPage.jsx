@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData, useRevalidator, useRouteLoaderData } from 'react-router-dom';
+import { useLoaderData, useRevalidator, useRouteLoaderData, useNavigate } from 'react-router-dom';
 import { CourseCard, EmptyState, FormField, Modal, Spinner } from '../../components/components.jsx';
 import { levelBadge } from '../../components/badges.js';
 import { COLORS } from '../../components/theme.js';
@@ -17,25 +17,10 @@ export default function CourseCatalogPage() {
   const [filtroNivel, setFiltroNivel] = React.useState(null);
   const [detalleCurso, setDetalleCurso] = React.useState(null);
   const [modalCurso, setModalCurso] = React.useState(null);
-
-  const handleEnroll = async (curso) => {
-    const ok = await confirm({
-      title: `Inscribirme en ${curso.titulo}`,
-      message: `Duración: ${curso.duracion} · Nivel: ${curso.nivel}`,
-      okText: 'Confirmar inscripción',
-      cancelText: 'Cancelar',
-      color: COLORS.accent,
-    });
-    if (!ok) return;
-    try {
-      await tidApi.createInscripcion({ usuario_id: session.id, curso_id: curso.id, fecha: new Date().toISOString().split('T')[0] });
-      toast.success(`Ahora tienes acceso a "${curso.titulo}"`, '¡Inscripción exitosa!');
-      revalidator.revalidate();
-    } catch (e) {
-      toast.error(e.message);
-    }
+  const navigate = useNavigate();
+  const handleEnroll = (curso) => {
+  navigate(`/registration-management/${curso.id}/process`);
   };
-
   const [formCurso, setFormCurso] = React.useState({});
   const [savingCurso, setSavingCurso] = React.useState(false);
 
