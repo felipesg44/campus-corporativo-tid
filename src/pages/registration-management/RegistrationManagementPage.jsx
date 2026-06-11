@@ -710,7 +710,9 @@ export default function RegistrationManagementPage() {
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
                 <div>
                   <div style={{ fontSize: '12px', color: COLORS.textMuted, marginBottom: '2px' }}>Alumno Inscrito</div>
-                  <div style={{ fontWeight: 600, color: COLORS.textPrimary }}>{session.nombre}</div>
+                  <div style={{ fontWeight: 600, color: COLORS.textPrimary }}>
+                    {[inscripcion.nombre, inscripcion.apellido].filter(Boolean).join(' ') || session.nombre}
+                  </div>
                 </div>
                 <div>
                   <div style={{ fontSize: '12px', color: COLORS.textMuted, marginBottom: '2px' }}>Instructor(a)</div>
@@ -723,6 +725,36 @@ export default function RegistrationManagementPage() {
                 <div>
                   <div style={{ fontSize: '12px', color: COLORS.textMuted, marginBottom: '2px' }}>Fecha de Fin (Estimada)</div>
                   <div style={{ fontWeight: 600, color: COLORS.textPrimary }}>{fechaFin}</div>
+                </div>
+              </div>
+
+              <div style={{ background: COLORS.surface2, borderRadius: '12px', padding: '16px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px' }}>
+                <div style={{ gridColumn: '1 / -1', fontWeight: 700, color: SURA_COLORS.azulSura, fontSize: '14px' }}>
+                  Datos de inscripción
+                </div>
+                <div>
+                  <div style={{ fontSize: '12px', color: COLORS.textMuted, marginBottom: '2px' }}>Documento</div>
+                  <div style={{ fontWeight: 600, color: COLORS.textPrimary }}>
+                    {[inscripcion.tipoDocumento, inscripcion.numeroDocumento].filter(Boolean).join(' - ') || 'Sin registrar'}
+                  </div>
+                </div>
+                <div>
+                  <div style={{ fontSize: '12px', color: COLORS.textMuted, marginBottom: '2px' }}>Telefono</div>
+                  <div style={{ fontWeight: 600, color: COLORS.textPrimary }}>{inscripcion.telefono || 'Sin registrar'}</div>
+                </div>
+                <div>
+                  <div style={{ fontSize: '12px', color: COLORS.textMuted, marginBottom: '2px' }}>Correo electronico</div>
+                  <div style={{ fontWeight: 600, color: COLORS.textPrimary, overflowWrap: 'anywhere' }}>{inscripcion.correo || 'Sin registrar'}</div>
+                </div>
+                <div>
+                  <div style={{ fontSize: '12px', color: COLORS.textMuted, marginBottom: '2px' }}>Ubicacion</div>
+                  <div style={{ fontWeight: 600, color: COLORS.textPrimary }}>
+                    {[inscripcion.municipio, inscripcion.departamento].filter(Boolean).join(', ') || 'Sin registrar'}
+                  </div>
+                </div>
+                <div style={{ gridColumn: '1 / -1' }}>
+                  <div style={{ fontSize: '12px', color: COLORS.textMuted, marginBottom: '2px' }}>Direccion de residencia</div>
+                  <div style={{ fontWeight: 600, color: COLORS.textPrimary }}>{inscripcion.direccion || 'Sin registrar'}</div>
                 </div>
               </div>
 
